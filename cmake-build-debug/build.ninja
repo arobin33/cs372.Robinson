@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: data
+# Project: Project
 # Configurations: Debug
 # =============================================================================
 
@@ -40,57 +40,6 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = C$:/Users/arobin14/CLionProjects/data/cmake-build-debug/
-# =============================================================================
-# Object build statements for EXECUTABLE target data
-
-
-#############################################
-# Order-only phony target for data
-
-build cmake_object_order_depends_target_data: phony || .
-
-build CMakeFiles/data.dir/main.cpp.obj: CXX_COMPILER__data_unscanned_Debug C$:/Users/arobin14/CLionProjects/data/main.cpp || cmake_object_order_depends_target_data
-  DEP_FILE = CMakeFiles\data.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\data.dir
-  OBJECT_FILE_DIR = CMakeFiles\data.dir
-
-build CMakeFiles/data.dir/apps/apptemplate/source/assignment01.cpp.obj: CXX_COMPILER__data_unscanned_Debug C$:/Users/arobin14/CLionProjects/data/apps/apptemplate/source/assignment01.cpp || cmake_object_order_depends_target_data
-  DEP_FILE = CMakeFiles\data.dir\apps\apptemplate\source\assignment01.cpp.obj.d
-  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\data.dir
-  OBJECT_FILE_DIR = CMakeFiles\data.dir\apps\apptemplate\source
-
-build CMakeFiles/data.dir/apps/hanoi/hanoi.cpp.obj: CXX_COMPILER__data_unscanned_Debug C$:/Users/arobin14/CLionProjects/data/apps/hanoi/hanoi.cpp || cmake_object_order_depends_target_data
-  DEP_FILE = CMakeFiles\data.dir\apps\hanoi\hanoi.cpp.obj.d
-  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\data.dir
-  OBJECT_FILE_DIR = CMakeFiles\data.dir\apps\hanoi
-
-build CMakeFiles/data.dir/apps/hanoi/hanoii.cpp.obj: CXX_COMPILER__data_unscanned_Debug C$:/Users/arobin14/CLionProjects/data/apps/hanoi/hanoii.cpp || cmake_object_order_depends_target_data
-  DEP_FILE = CMakeFiles\data.dir\apps\hanoi\hanoii.cpp.obj.d
-  FLAGS = -g -std=gnu++11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\data.dir
-  OBJECT_FILE_DIR = CMakeFiles\data.dir\apps\hanoi
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target data
-
-
-#############################################
-# Link the executable data.exe
-
-build data.exe: CXX_EXECUTABLE_LINKER__data_Debug CMakeFiles/data.dir/main.cpp.obj CMakeFiles/data.dir/apps/apptemplate/source/assignment01.cpp.obj CMakeFiles/data.dir/apps/hanoi/hanoi.cpp.obj CMakeFiles/data.dir/apps/hanoi/hanoii.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\data.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = data.exe
-  TARGET_IMPLIB = libdata.dll.a
-  TARGET_PDB = data.exe.dbg
-
 
 #############################################
 # Utility command for edit_cache
@@ -117,8 +66,6 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build data: phony data.exe
-
 # =============================================================================
 # Folder targets.
 
@@ -127,7 +74,12 @@ build data: phony data.exe
 #############################################
 # Folder: C:/Users/arobin14/CLionProjects/data/cmake-build-debug
 
-build all: phony data.exe
+build all: phony
+
+# =============================================================================
+# Unknown Build Time Dependencies.
+# Tell Ninja that they may appear as side effects of build rules
+# otherwise ordered by order-only dependencies.
 
 # =============================================================================
 # Built-in targets

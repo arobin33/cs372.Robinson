@@ -157,7 +157,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=data
+CMAKE_PROJECT_NAME:STATIC=Project
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Users/arobin14/Desktop/CLion 2024.2.1/bin/mingw/bin/ranlib.exe
@@ -243,6 +243,15 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+Project_BINARY_DIR:STATIC=C:/Users/arobin14/CLionProjects/data/cmake-build-debug
+
+//Value Computed by CMake
+Project_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Project_SOURCE_DIR:STATIC=C:/Users/arobin14/CLionProjects/data
+
+//Value Computed by CMake
 data_BINARY_DIR:STATIC=C:/Users/arobin14/CLionProjects/data/cmake-build-debug
 
 //Value Computed by CMake
@@ -250,6 +259,15 @@ data_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 data_SOURCE_DIR:STATIC=C:/Users/arobin14/CLionProjects/data
+
+//Value Computed by CMake
+untitled2_BINARY_DIR:STATIC=C:/Users/arobin14/CLionProjects/data/cmake-build-debug
+
+//Value Computed by CMake
+untitled2_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+untitled2_SOURCE_DIR:STATIC=C:/Users/arobin14/CLionProjects/data
 
 
 ########################

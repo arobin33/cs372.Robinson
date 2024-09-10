@@ -1,3 +1,2 @@
-C:/Users/arobin14/CLionProjects/data/cmake-build-debug/CMakeFiles/data.dir
 C:/Users/arobin14/CLionProjects/data/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/arobin14/CLionProjects/data/cmake-build-debug/CMakeFiles/rebuild_cache.dir

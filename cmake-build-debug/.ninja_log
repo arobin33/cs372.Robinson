@@ -1,0 +1,11 @@
+# ninja log v6
+9	1502	7477077260299682	CMakeFiles/data.dir/main.cpp.obj	8257e2f1095cec01
+1506	2389	7477077275268474	CMakeFiles/data.dir/apps/hanoi/hanoii.cpp.obj	8a1330656a7b5b56
+72	1568	7477077260927744	CMakeFiles/data.dir/apps/apptemplate/source/assignment01.cpp.obj	50cf8f05530aa132
+15	756	7477078120538144	CMakeFiles/data.dir/apps/apps/assignment_01_part_1_raw_pointers_can_be_evil.cpp.obj	f5d60d960f641125
+113	1646	7477077261343298	CMakeFiles/data.dir/apps/hanoi/hanoi.cpp.obj	28cbaec25855cda9
+17	1155	7477077733158036	CMakeFiles/data.dir/apps/assignment_01_part_1_raw_pointers_can_be_evil.cpp.obj	89b8326dcdcd65d8
+4	595	7477093612067271	build.ninja	82a7f5ce95fc0d65
+15	757	7477081207718208	CMakeFiles/data.dir/apps/apptemplate/source/assignment_01_part_1_raw_pointers_can_be_evil.cpp.obj	3ccce219da56bb4c
+9	724	7477088462421422	CMakeFiles/untitled2.dir/main.cpp.obj	62c160b5fcfaa29e
+10	836	7477090226529472	CMakeFiles/untitled2.dir/apps/apptemplate/source/assignment_01_part_1_raw_pointers_can_be_evil.cpp.obj	8228accf889e7c38

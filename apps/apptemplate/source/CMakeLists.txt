@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include_directories(../../include
-  ${PROJECT_SOURCE_DIR}/include
+        ../../../include
   ${PROJECT_SOURCE_DIR}/source)
 
 file(GLOB all_SRCS
