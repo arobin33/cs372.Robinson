@@ -1,3 +1,77 @@
 //
-// Created by arobin14 on 9/10/2024.
-//
+// File:   assignment1 part 2.cpp
+// Author: <Arielle Robinson>
+// Purpose:timing of the towers of hanoi
+//#include <iostream>
+#include <chrono>
+#include <stack>
+#include <cmath>
+
+using namespace std;
+using namespace chrono;
+
+void towerOfHanoiRecursive(int numDisks, char source, char destination, char auxiliary) {
+    if (numDisks == 1) {
+        cout << "Move disk 1 from " << source << " to " << destination << endl;
+        return;
+    }
+
+    towerOfHanoiRecursive(numDisks - 1, source, auxiliary, destination);
+    cout << "Move disk " << numDisks << " from " << source << " to " << destination << endl;
+    towerOfHanoiRecursive(numDisks - 1, auxiliary, destination, source);
+}
+
+// Tower of Hanoi
+void towerOfHanoiIterative(int numDisks, char source, char destination, char auxiliary) {
+    // number of moves needed
+    int totalMoves = (1 << numDisks) - 1;
+
+    char from = source;
+
+    // Determine the direction of movement:
+    char to = (numDisks % 2 == 0) ? destination : auxiliary;
+
+    char aux = (to == destination) ? auxiliary : destination;
+
+    int largestPowerOfTwo = 1;
+    while (largestPowerOfTwo * 2 <= numDisks) {
+        largestPowerOfTwo *= 2;
+    }
+
+    for (int i = 1; i <= totalMoves; ++i) {
+        if (i == largestPowerOfTwo) {
+            // Move the largest disk
+            cout << "Move disk " << numDisks << " from " << from << " to " << to << endl;
+
+            swap(to, aux);
+            largestPowerOfTwo *= 2;
+        } else {
+
+            cout << "Move disk " << (numDisks - (i - largestPowerOfTwo) / 2) << " from " << from << " to " << to << endl;
+
+            swap(from, aux);
+        }
+    }
+}
+
+int main() {
+    for (int numDisks = 5; numDisks <= 35; numDisks += 5) {
+        auto startRecursive = high_resolution_clock::now();
+        towerOfHanoiRecursive(numDisks, 'A', 'C', 'B');
+        auto endRecursive = high_resolution_clock::now();
+        duration<double> timeRecursive = endRecursive - startRecursive;
+
+
+        auto startIterative = high_resolution_clock::now();
+        towerOfHanoiIterative(numDisks, 'A', 'C', 'B');
+        auto endIterative = high_resolution_clock::now();
+        duration<double> timeIterative = endIterative - startIterative;
+
+        cout << "Number of disks: " << numDisks << endl;
+        cout << "Recursive Time: " << timeRecursive.count() << " seconds" << endl;
+        cout << "Iterative Time: " << timeIterative.count() << " seconds" << endl;
+        cout << "---------------------------------" << endl;
+    }
+
+    return 0;
+}
