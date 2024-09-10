@@ -1,0 +1,4 @@
+#ifndef ASSIGNMENT_1_PART_2_H
+#define ASSIGNMENT_1_PART_2_H
+
+#endif //ASSIGNMENT_1_PART_2_H
