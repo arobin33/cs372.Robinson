@@ -1,0 +1,87 @@
+/
+// File:   assignment3part2.cpp
+// Author: arielle robinson
+// Purpose: switching the bag to use lists
+
+ 
+
+#include <iostream>
+using namespace std;
+
+template <typename T>
+class Bag {
+private:
+    List<T> items;
+
+public:
+    Bag() {}
+    void add(T);
+    void remove(T);
+    bool contains(T);
+    void display();
+};
+
+template <typename T>
+void Bag<T>::add(T data) {
+    items.push_back(data);
+}
+
+template <typename T>
+void Bag<T>::remove(T data) {
+    // Removing the first occurrence of data in the list
+    List<T> temp;
+    bool found = false;
+    
+    while (!items.empty()) {
+        T frontData = items.front();
+        items.pop_front();
+        if (found || frontData != data) {
+            temp.push_back(frontData);
+        } else {
+            found = true;  // Remove only the first occurrence
+        }
+    }
+    items = temp;  // Reassign the temporary list back to items
+}
+
+template <typename T>
+bool Bag<T>::contains(T data) {
+    List<T> temp = items;
+    while (!temp.empty()) {
+        if (temp.front() == data) {
+            return true;
+        }
+        temp.pop_front();
+    }
+    return false;
+}
+
+template <typename T>
+void Bag<T>::display() {
+    items.traverse(printIt);
+}
+
+void printIt(int data) {
+    cout << data << " ";
+}
+
+int main() {
+    Bag<int> bag;
+    bag.add(1);
+    bag.add(2);
+    bag.add(3);
+    bag.add(2);
+
+    cout << "Bag contains: ";
+    bag.display();
+
+    cout << "\nRemoving 2 from the bag." << endl;
+    bag.remove(2);
+
+    cout << "Bag contains: ";
+    bag.display();
+
+    cout << "\nDoes the bag contain 2? " << (bag.contains(2) ? "Yes" : "No") << endl;
+
+    return 0;
+}
