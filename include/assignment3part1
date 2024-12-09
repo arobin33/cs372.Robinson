@@ -1,7 +1,7 @@
 //
 // File:   assignment3part1.cpp
 // Author: arielle robinson
-// Purpose: make a list 
+// Purpose: make a list
 
 #include <iostream>
 using namespace std;
